@@ -23,4 +23,14 @@ class ComputeTotalDistanceBetweenLocationListsTest {
 
         assertEquals(distance, 7) 
     }
+
+    @Test
+    fun `Should return the sum of distances of each pair of location IDs when the lists are ordered and have more than one location`() {
+        val rightList = listOf(2, 6)
+        val leftList = listOf(1, 11)
+
+        val distance = ComputeTotalDistanceBetweenLocationLists().execute(rightList, leftList)
+
+        assertEquals(distance, 6) 
+    }
 }
