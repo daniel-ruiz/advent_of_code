@@ -4,6 +4,8 @@ import kotlin.math.abs
 class ComputeTotalDistanceBetweenLocationLists {
   fun execute(rightList: List<Int>, leftList: List<Int>): Int {
     var totalDistance = 0
+    val rightList: List<Int> = rightList.sorted()
+    val leftList: List<Int> = leftList.sorted()
 
     for (i in 0..rightList.count()-1) {
       val rightLocationID = rightList[i]
