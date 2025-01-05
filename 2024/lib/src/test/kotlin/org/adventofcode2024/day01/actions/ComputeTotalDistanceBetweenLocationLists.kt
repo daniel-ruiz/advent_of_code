@@ -9,8 +9,18 @@ class ComputeTotalDistanceBetweenLocationListsTest {
         val rigthList = listOf(5)
         val leftList = listOf(3)
 
-        val action = ComputeTotalDistanceBetweenLocationLists()
+        val distance = ComputeTotalDistanceBetweenLocationLists().execute(rigthList, leftList)
 
-        assertEquals(action.execute(rigthList, leftList), 2)
+        assertEquals(distance, 2)
+    }
+
+    @Test
+    fun `Should return a positive distance when the right location ID is less than the left location ID`() {
+        val rightList = listOf(4)
+        val leftList = listOf(11)
+
+        val distance = ComputeTotalDistanceBetweenLocationLists().execute(rightList, leftList)
+
+        assertEquals(distance, 7) 
     }
 }
