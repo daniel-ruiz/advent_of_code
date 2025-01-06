@@ -3,12 +3,13 @@
  */
 package org.example.app
 
-import org.example.utilities.StringUtils
-
-import org.apache.commons.text.WordUtils
+import org.example.day01.actions.ComputeTotalDistanceBetweenLocationLists
+import org.example.day01.infrastructure.LocationsRepository
 
 fun main() {
-    val tokens = StringUtils.split(MessageUtils.getMessage())
-    val result = StringUtils.join(tokens)
-    println(WordUtils.capitalize(result))
+    val reader = "3   4\n4   3".reader()
+    val locations = LocationsRepository().getFromReader(reader)
+    val distance = ComputeTotalDistanceBetweenLocationLists().execute(locations) 
+
+    println("The total distance between locations is: $distance")
 }

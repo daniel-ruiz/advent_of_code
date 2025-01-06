@@ -1,5 +1,5 @@
-package org.day01.actions
-import org.day01.domain.Locations
+package org.example.day01.actions
+import org.example.day01.domain.Locations
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 

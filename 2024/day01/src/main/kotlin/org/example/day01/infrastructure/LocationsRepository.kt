@@ -1,5 +1,5 @@
-package org.day01.infrastructure
-import org.day01.domain.Locations
+package org.example.day01.infrastructure
+import org.example.day01.domain.Locations
 import java.io.Reader
 
 class LocationsRepository {

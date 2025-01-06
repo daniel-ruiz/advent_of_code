@@ -1,5 +1,5 @@
-package org.day01.actions
-import org.day01.domain.Locations
+package org.example.day01.actions
+import org.example.day01.domain.Locations
 import kotlin.math.abs
 
 class ComputeTotalDistanceBetweenLocationLists {
